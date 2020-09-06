@@ -10,6 +10,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@master
+        with:
+          platforms: all
       - name: create dockerx builder
         run: docker buildx create --use --name=gaia
       - name: build and publish
