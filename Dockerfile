@@ -6,7 +6,7 @@ RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.10/m
 FROM base as build
 RUN apk add --no-cache g++ make linux-headers
 
-RUN npm i hue2mqtt homekit2mqtt zigbee2mqtt
+RUN npm i hue2mqtt hue-mqtt-sensors homekit2mqtt zigbee2mqtt
 RUN pip2 install virtualenv
 RUN virtualenv /opt/musiccast2mqtt
 RUN /opt/musiccast2mqtt/bin/pip install musiccast2mqtt mqttgateway==1.0.0
