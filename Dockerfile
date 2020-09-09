@@ -1,6 +1,6 @@
 FROM alpine:3.11 as base
 
-RUN apk add --no-cache python2 py2-pip avahi-dev
+RUN apk add --no-cache python2 py2-pip
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.10/main/ nodejs=10.19.0-r0 npm
 
 FROM base as build
